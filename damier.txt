@@ -1,0 +1,62 @@
+Variables i, j , posi, posj, i2, j2 en Entier
+Variables Correct, MoveOK en Booléen
+Tableau Damier[7, 7] en Booléen
+Tableau Mouv[3, 1] en Entier
+
+Debut
+Choix 0 : pion en haut à droite
+Mouv[0, 0] ← -1
+Mouv[0, 1] ← -1
+Choix 1 : pion en haut à droite
+Mouv[1, 0] ← -1
+Mouv[1, 1] ← 1
+Choix 2 : pion en bas à gauche
+Mouv[2, 0] ← 1
+Mouv[2, 1] ← -1
+Choix 3 : pion en bas à droite
+Mouv[3, 0] ← 1
+Mouv[3, 1] ← 1
+
+
+Initialisation du damier; le pion n’est pour le moment nulle part
+Pour i ← 0 à 7
+  Pour j ← 0 à 7
+    Damier[i, j] ← Faux
+  j suivant
+i suivant
+
+
+// Demande la position de pion 
+Ecrire “donner la position de départ : où se trouve votre pion ? ”
+Lire posi, posj 
+
+tantque posi< 0 OU posi> 7 
+     écrire “merci d’écrire un chiffre entre 0 et 7” 
+     lire posi
+fintantque
+
+tantque posj< 0 OU posj > 7 
+    écrire “merci d’écrire un chiffre entre 0 et 7” 
+    lire posj
+fintantque
+
+// Demande le mouvement 
+Ecrire "choisissez un mouvement : 0(haut gauche), 1(haut droite), 2(bas gauche),3 (bas droite”
+Lire NB
+
+Tantque NB < 0 OU NB > 3 
+        écrire “merci de choisir un autre mouvement compris entre 0 et 3”
+        lire NB 
+fintantque
+
+// initialisation des nouvelles positions
+i2  ← posi + Mov[NB, 0]
+j2  ← posj + Mov[NB, 0]
+
+// on efface l’ancien damier et on dit à l’ordi de garder le nouveau damier 
+Moveok ← i2 >= 0 ET i2<=7 ET j2>=0 ET j2 <= 7
+
+Si Moveok alors 
+Damier[posi, posj] ← faux
+Damier [i2, j2] ← vrai 
+finsi

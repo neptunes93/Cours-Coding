@@ -1,0 +1,37 @@
+FONCTION Voy
+VAR i,Nb en num
+DEBUT
+ECRIRE "phrase"
+LIRE ph
+Nb ← 0
+Voy ← "aeiouy"
+Pour i ← 1 à Len("ph")
+  Si Trouve(Voy, Mid("ph", i, 1)) <> 0 Alors
+    Nb ← Nb + 1
+Finsi
+isuivant
+Ecrire " Nombre de voyelle :", Nb
+RENVOYER Nb
+FIN
+
+
+
+Fonction trouve
+
+
+debut
+
+
+
+Si len(b)<>len(a)  
+
+
+<<<<<<< HEAD
+ test git 
+=======
+>>>>>>> 8c2d9b854afa4c3672fcbb381aa2c6000bf280e7
+
+
+
+
+merdeeee
