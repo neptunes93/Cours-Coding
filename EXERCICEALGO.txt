@@ -1,0 +1,36 @@
+EXERCICE 11.1
+
+Var somme, resultat, n1, n2, n3, n4, n5 en entier
+Fonction somme(A, B, C, D, E en entier) en entier
+Renvoyer A+B+C+D+E
+Début
+Ecrire “5 nombres”
+Lire n1, n2, n3, n4, n5
+resultat ← somme(1, n2, n3, n4, n5)
+Ecrire “le résultat est :” resultat
+Fin
+
+EXERCICE 11.2
+
+Fonction NbVoyelles(Mot en caractère) en numérique
+Var i, nb en numérique
+nb ← 1 à len(Mot)
+Si trouve( “aeiouy”, Mid(Mot, i, 1)) <> 0 alors
+nb ← nb + 1
+Finsi
+i suivant
+Renvoyer nb
+Finfonction
+
+EXERCICE 11.3
+
+Fonction trouver (A, B en caractère) en entier
+var i en entier
+si len(b) > len(a) alors // si le B est plus grand que A, la fonction renverra faut
+renvoyer 0
+sinon
+Pour i ← 1 à len(A)+1 - len(B)
+si mid(A, i , len(B)) = B alors // on recherche dans la position du caractère B dans A
+renvoyer i
+i suivant
+FinFonction
